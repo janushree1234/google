@@ -1,3 +1,62 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+
+# Environments
+venv/
+env/
+ENV/
+*.env
+*.venv
+*.local
+
+# Django stuff
+/staticfiles/
+/media/
+/*.db
+*.sqlite3
+*.log
+local_settings.py
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs
+.idea/
+.shelf/
+workspace.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if you use npm/yarn somewhere in project)
+node_modules/
+
+# Large design/wireframe assets (don’t push to GitHub)
+wireframe/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.zip
+*.psd
+*.mp4
+
+# Google Cloud build artifacts
+appengine-generated/
