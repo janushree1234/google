@@ -1,0 +1,15 @@
+Django==5.2.3
+psycopg2-binary
+supabase
+gunicorn
+whitenoise
+django-extensions
+python-decouple
+django-cors-headers
+djangorestframework-simplejwt
+PyJWT<2.10.0
+django-csp
+django-axes
+bleach>=6.0.0
+python-magic-bin
+django-ckeditor
