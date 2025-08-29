@@ -9,9 +9,87 @@
     --hover-blue: #4A97FF;
 }
 
-/* @media {
-    font-family: 'Poppins';
-    } */
+
+h1 {
+    font-size: clamp(28px, 5vw, 52px) !important;
+}
+
+h2 {
+    font-size: clamp(22px, 3.5vw, 35px) !important;
+}
+
+h3 {
+    font-size: clamp(18px, 2.5vw, 24px) !important;
+}
+
+p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: clamp(13px, 1.5vw, 16px) !important;
+}
+
+a {
+    font-size: clamp(13px, 1.2vw, 15px) !important;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;   /* Firefox */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;           /* Chrome, Safari, Edge */
+}
+
+
+.my-scroll-section {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+html, body {
+    overflow-x: hidden;
+     overflow-y: hidden;
+}
+
+
+.feature {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Desktop only (≥992px) */
+@media (min-width: 992px) {
+  .feature {
+    margin-left: 120px;  /* adjust as needed */
+    margin-right: 80px; /* optional, keeps it balanced */
+  }
+}
+/* Allow scroll but hide scrollbar */
+html, body {
+    overflow-y: scroll;
+       /* keep vertical scroll active */
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent; 
+}
+
+/* Hide scrollbar for Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE/old Edge */
+body {
+    -ms-overflow-style: none;
+}
 
 /* @font-face {
   font-family: 'Poppins';
@@ -39,7 +117,7 @@
   font-family: 'Poppins';
   src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
   font-weight: 800; */
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
     src: url("/static/fonts/Poppins-Regular.ttf") format('truetype');
     font-weight: 400;
@@ -48,35 +126,38 @@
     font-family: 'Poppins';
     src: url("/static/fonts/Poppins-Medium.ttf") format('truetype');
     font-weight: 500;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url("/static/fonts/Poppins-SemiBold.ttf") format('truetype');
-    font-weight: 600;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url("/static/fonts/Poppins-ExtraBold.ttf") format('truetype');
-    font-weight: 800;
-}
-
-
-
-
+} */
 
 
 
 @font-face {
   font-family: 'Poppins';
-  src: url("{% static 'fonts/Poppins-Regular.ttf' %}") format('truetype');
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url("{% static 'fonts/Poppins-Medium.ttf' %}") format('truetype');
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+/* Apply to whole site */
+
+
+
 
 
 
@@ -99,7 +180,7 @@
     flex: 0 0 var(--card-width);
     scroll-snap-align: start;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
 
@@ -131,7 +212,7 @@
     font-family: 'Poppins'!important;
     text-align: center;
     /* font-size: 0.95rem; */
-        font-size: 15px !important;
+        font-size: 14px !important;
     color: #000000;
     line-height: 1.4;
 }
@@ -159,7 +240,7 @@ h2{
 }
 p{
     font-family: 'Poppins'!important;
-    font-size: 15px!important;
+    font-size: 14px!important;
 }
 h3{
     font-size:24px!important;
@@ -169,7 +250,7 @@ a{
 }
 * {
     /* background-color: #f5f5f5; */
-    font-family:'Poppins'!important;
+   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -475,6 +556,9 @@ body {
     /* margin: 0 auto 1.5rem; */
     /* padding: 0 1rem; */
 }
+.hero-description strong{
+    font-weight: 600;
+}
 
 .tagline {
     font-size:18px!important;
@@ -566,59 +650,82 @@ body {
     font-weight: 400;
 }
 .conn-image {
-    margin-left: 30px;
+    margin-left: 21px;
     width: 300px;
-    top: 50%;
+    top: 42%;
     left:0;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+.connecting-section {
+  position: relative;
+  overflow: hidden;
+}
 
+.image-wrapper {
+  position: relative;
+  max-width: 500px; /* control width on desktop */
+  width: 100%;
+}
+
+/* First Image */
+.conn-image {
+  width:100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Second Image (slightly behind / shifted) */
 .connecting-image {
-    width: 66%;
-    margin-left: 310px;
-    /* width: 400px; */
-    top: 50%;
-    left: 100px;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-40%, -40%);
+  z-index: 1;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
-    .conn-image {
-        width: 200px;
-        left: 30%;
-        transform: translate(-50%, -50%);
-    }
-
-    .connecting-image {
-        width: 280px;
-        left: 60%;
-        transform: translate(-50%, -50%);
-    }
+  .conn-image {
+    width: 50%;
+    top:50%;
+  }
+  .connecting-image {
+    width: 65%;
+    transform: translate(-45%, -45%);
+  }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-    .conn-image {
-        width: 200px;
-        left: 20%;
-    }
+  .image-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
-    .connecting-image {
-        width: 230px;
-        left: 6%;
-        top:27px;
-    }
+  .conn-image {
+    width:100%;
+    position: relative;
+  }
 
-    .connecting-section h2 {
-        font-size: 2rem;
-    }
+  .connecting-image {
+    width:100%;
+    position: absolute;
+    top: 65%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+  }
 
-    .connecting-section p {
-        font-size: 1rem;
-    }
+  .connecting-section h2 {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .connecting-section p {
+    font-size: 1rem;
+  }
 }
-
 
 
 /* 
@@ -671,12 +778,13 @@ feature section */
 
 /* Horizontal scroll for all screens */
 .scroll-wrapper {
+        padding-left: 10px;
     display: flex;
     overflow-x: auto;
     gap: 30px;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type:none;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -714,7 +822,7 @@ feature section */
 }
 
 .feature-card h3 {
-    font-size: 1.2rem;
+    font-size:22px!important;
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -782,7 +890,7 @@ feature section */
     overflow-x: auto;
     gap: 30px;
     padding-bottom: 1rem;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type:none;
     -webkit-overflow-scrolling: touch;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -852,7 +960,7 @@ feature section */
 /* Responsive Tweaks */
 @media (max-width: 750px) {
     .whats-new .scroll-wrapper {
-        padding: 0;
+        /* padding: 0; */
         /* remove edge padding */
     }
 
@@ -1612,7 +1720,8 @@ padding: 0px!important;
 
 .faq-answer p {
     margin-top:2px;
-    font-size: 16px!important;
+    font-size: 14px!important;
+    font-weight: 500;
     color:#000000;
     line-height: 1.6;
     margin: 0;
@@ -1922,7 +2031,10 @@ footer {
 /* .top-treks .carousel-slide, */
 .testimonials .carousel-slide {
     /* flex: 0 0 calc((100% - 60px) / 3.7); */
-    min-width: calc((100% - 60px) / 3.7);
+    /* min-width: calc((100% - 60px) / 3.7); */
+     min-width: calc((60% - 60px) / 3.7);
+flex: 0 0 270px; /* smaller card width */
+
     background: white;
     border-radius: 16px;
     overflow: hidden;

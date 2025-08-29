@@ -60,3 +60,35 @@ wireframe/
 
 # Google Cloud build artifacts
 appengine-generated/
+
+.gcloudignore
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Build/cache
+*.log
+*.sqlite3
+*.db
+
+# Node modules (if any frontend code)
+node_modules/
+
+# Django static/media (they get regenerated)
+staticfiles/
+media/
