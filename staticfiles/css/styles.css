@@ -8,7 +8,10 @@
     --gray-text: #666;
     --hover-blue: #4A97FF;
 }
-
+.px-2 {
+    padding-right: .5rem!important;
+    padding-left: 5.5rem !important;
+}
 
 h1 {
     font-size: clamp(28px, 5vw, 52px) !important;

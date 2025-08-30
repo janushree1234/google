@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+j{% extends 'base.html' %}
 {% load static %}
 
 {% block title %}Contact Us - Aorbo Treks{% endblock %}
@@ -161,7 +161,7 @@
         </div>
 
         <div class="col-lg-6 d-flex align-items-center">
-            <img src="{% static 'images/contact service.jpg' %}" alt="Customer Support" class="contact-image">
+            <img src="{% static 'images/contact service.webp' %}" alt="Customer Support" class="contact-image">
         </div>
     </div>
 
@@ -175,7 +175,7 @@
                     grievance team.</p>
                 <a href="mailto:Aorbotreks@gmail.com?subject=Issue Regarding the AorboTreks App"
                     class="contact-link d-flex align-items-center">
-                    <img src="{% static 'images/image.png' %}" class="msg-icon">Send a message
+                    <img src="{% static 'images/image.webp' %}" class="msg-icon">Send a message
                 </a>
             </div>
         </div>
@@ -211,7 +211,7 @@
         <div class="col-md-6 d-flex">
             <div class="border rounded card-custom w-100">
                 <h4>Registered Address</h4>
-                <img src="{% static 'images/map_loc.jpg' %}" alt="Map Icon" class="img-fluid rounded mb-2"
+                <img src="{% static 'images/map_loc.webp' %}" alt="Map Icon" class="img-fluid rounded mb-2"
                     style="max-height: 150px;">
                 {% if contact_info %}
                 <address>
@@ -222,7 +222,7 @@
                 </address>
                 {% if contact_info.map_link %}
                 <a href="{{ contact_info.map_link }}" target="_blank" class="contact-link d-flex align-items-center">
-                    <img src="{% static 'images/image-1.png' %}" class="icon"> View in Maps
+                    <img src="{% static 'images/image-1.webp' %}" class="icon"> View in Maps
                 </a>
                 {% endif %}
                 {% else %}
@@ -233,7 +233,7 @@
                     CIN: U67190KA2012PTC176031
                 </address>
                 <a href="https://maps.app.goo.gl/ZgXJtZU7XJ9BXkaZ9" class="contact-link d-flex align-items-center">
-                    <img src="{% static 'images/image-1.png' %}" class="icon"> View in Maps
+                    <img src="{% static 'images/image-1.webp' %}" class="icon"> View in Maps
                 </a>
                 {% endif %}
             </div>
@@ -251,7 +251,7 @@
                 <p class="support-text">To reach us by phone, tap below</p>
                 {% if contact_info.phone_number %}
                 <a href="tel:+{{ contact_info.phone_number }}" class="contact-link d-flex align-items-center">
-                    <img src="{% static 'images/image-2.png' %}" class="icon"> Contact Us
+                    <img src="{% static 'images/image-2.webp' %}" class="icon"> Contact Us
                 </a>
                 {% endif %}
                 {% else %}
@@ -261,7 +261,7 @@
                 </a>
                 <p class="support-text">To reach us by phone, tap below</p>
                 <a href="tel:+919398093503" class="contact-link d-flex align-items-center">
-                    <img src="{% static 'images/image-2.png' %}" class="icon"> Contact Us
+                    <img src="{% static 'images/image-2.webp' %}" class="icon"> Contact Us
                 </a>
                 {% endif %}
             </div>
